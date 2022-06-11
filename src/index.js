@@ -13,7 +13,13 @@ function mongooseNanoidPlugin(schema, opts) {
   fieldObj._id = {
     type: String,
     default: function () {
-      return prefix + generateId(opts) + postfix;
+      let kindPrefix = '';
+
+      if (this.kind) {
+        kindPrefix = this.kind[0];
+      }
+
+      return kindPrefix + prefix + generateId(opts) + postfix;
     },
   };
 
@@ -24,7 +30,13 @@ function mongooseNanoidPlugin(schema, opts) {
     try {
       const id = await attemptToGenerate(this, opts);
 
-      this._id = prefix + id + postfix;
+      let kindPrefix = '';
+
+      if (this.kind) {
+        kindPrefix = this.kind[0];
+      }
+
+      this._id = kindPrefix + prefix + id + postfix;
 
       next();
     } catch (e) {

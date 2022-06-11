@@ -1,6 +1,6 @@
 {
   "name": "@zeytin/mongoose-nanoid",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "types": "index.d.ts",
   "description": "Customized id implementation with nanoid for mongoose",
   "main": "./src/index.js",
