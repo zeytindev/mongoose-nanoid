@@ -1,0 +1,36 @@
+{
+  "name": "@zeytin/mongoose-nanoid",
+  "version": "0.1.0",
+  "types": "index.d.ts",
+  "description": "Customized id implementation with nanoid for mongoose",
+  "main": "./src/index.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeytindev/mongoose-nanoid.git"
+  },
+  "keywords": [
+    "mongoose",
+    "nanoid",
+    "mongoose-plugin"
+  ],
+  "author": "Zeytin <info@zeytin.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeytindev/mongoose-nanoid/issues"
+  },
+  "homepage": "https://github.com/zeytindev/mongoose-nanoid#readme",
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "mongoose": "^6.3.6",
+    "prettier": "^2.6.2"
+  },
+  "dependencies": {
+    "nanoid": "^3.3.4"
+  }
+}
